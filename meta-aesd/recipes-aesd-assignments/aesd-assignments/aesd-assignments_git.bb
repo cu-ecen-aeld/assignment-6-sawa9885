@@ -7,7 +7,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-3-sawa9885.git;protocol=
 PV = "1.0+git${SRCPV}"
 SRCREV = "16c032b3f521c17adfbc663b8f1e1872b176d28a"
 
-S = "${WORKDIR}/git/server"
+S = "${UNPACKDIR}/git/server"
 
 FILES:${PN} += "${bindir}/aesdsocket ${sysconfdir}/init.d/aesdsocket"
 
