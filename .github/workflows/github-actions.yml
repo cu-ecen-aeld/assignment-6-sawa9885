@@ -8,6 +8,9 @@ on:
 jobs:
       full-test:
         runs-on: self-hosted
+        # The build step allows up to 10 hours on a resource-constrained
+        # self-hosted runner, so the job must exceed GitHub's 6-hour default.
+        timeout-minutes: 660
         steps:
           - uses: actions/checkout@v7
             with:
