@@ -51,6 +51,8 @@ jobs:
               fi
 
               docker run --rm \
+                 --cpuset-cpus 2-11 \
+                 --cpus 6 \
                  "${docker_args[@]}" \
                  ${SSH_DOCKER_ARGS:-} \
                  -v ${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE} \
